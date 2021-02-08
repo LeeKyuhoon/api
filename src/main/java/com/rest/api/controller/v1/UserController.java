@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Log4j2
 @Api(tags = {"1. User"})
 @RequiredArgsConstructor
 @RestController
@@ -40,7 +39,6 @@ public class UserController {
     @PostMapping(value = "/user2")
     public User save(@RequestBody User user){
 
-        log.info(user.toString());
         return userJpaRepo.save(user);
     }
 }
